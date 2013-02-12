@@ -1,0 +1,253 @@
+@import 'nib'
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300')
+
+//
+// Basic reset
+//
+
+*
+  margin 0
+  padding 0
+
+black = #333
+white = #fff
+peach = #DD8469
+blue = #509fdc
+yellow = #F2DB5A
+green = #a8d550
+red = #d7481b
+
+//
+// Global styles
+//
+
+body
+  color black
+  font-family 'Open Sans', sans-serif
+  font-size 16px
+  background-image url('../images/pliers.svg')
+  background-repeat no-repeat
+  background-color red
+  background-size 100%
+
+a
+  color #222
+
+strong
+  font-weight 400
+
+.container
+  padding 100px 0px
+
+  &.peach
+    background-color peach
+
+  &.white
+    background-color white
+
+  &.blue
+    background-color blue
+
+  &.yellow
+    background-color yellow
+
+  &.green
+    background-color green
+
+  &.red
+    // background-color red
+
+.section
+  max-width 800px
+  margin 0 auto
+  padding 100px 40px 100px
+  position relative
+
+.button
+  text-decoration none
+  background-color #fff
+  background-color rgba(#fff, 0.8)
+  color black
+  padding 10px 20px
+  border-radius 30px
+
+  .yellow &
+    color yellow
+  .peach &
+    color peach
+  .blue &
+    color blue
+  .white &
+    color white
+  .green &
+    color green
+  .red &
+    color red
+
+  &:hover
+    background-color rgba(#fff, 1)
+
+.button-alt
+  @extend .button
+  color #fff
+  background-color rgba(#333, 0.8)
+  &:hover
+    background-color rgba(#333, 1)
+
+.page-footer
+  @extend .section
+  padding 50px 40px 50px
+
+//
+// Headings
+//
+
+.hgroup
+  margin-bottom 25px
+
+.heading
+  text-transform uppercase
+  font-weight 300
+
+.main-title
+  @extend .heading
+  font-size 50px
+
+.sub-title
+  @extend .heading
+  font-size 20px
+
+//
+// Terminal window
+//
+
+.window
+  border-radius 3px
+  box-shadow 0px 10px 20px rgba(#000, 0.1), 0px 0px 0px 1px rgba(#000, 0.2)
+  max-width 500px
+  margin-bottom 100px
+
+.window-top-bar
+  height 22px
+  background-image linear-gradient(top, #ccc, darken(#ccc, 20%))
+  border-radius 3px 3px 0px 0px
+  border-bottom 1px solid #888
+  box-shadow inset 0px 1px 0px rgba(white, 0.3)
+  text-align center
+
+.window-title
+  font-size 13px
+  line-height 13px
+  height 13px
+  position relative
+  top -1px
+  color #555
+  text-shadow 0px 1px 0px rgba(white, 0.1)
+
+
+.terminal
+  background-color #333
+  border-radius 0px 0px 3px 3px
+  padding 20px
+  font-family 'Menlo', 'Monaco', monospace
+
+  .prompt
+    color #ED4633
+
+  .pwd
+    color #64E5E6
+    padding 0px 20px
+
+  .command
+    color #fff
+
+
+//
+// Articles
+//
+
+.article
+  p
+  ul
+  ol
+  blockquote
+  pre
+    line-height 1.7
+    margin-bottom 25px
+    clear both
+
+  ul
+  ol
+    list-style-position inside
+    padding-left 20px
+
+.article-title
+  @extend .heading
+  font-size 30px
+  margin-bottom 20px
+
+//
+// Code blocks
+//
+
+pre
+  box-shadow 0px 0px 10px rgba(black, 0.1), 0px 0px 0px 1px rgba(black, 0.2)
+  border-radius 2px 2px
+  padding 20px
+  background-color white
+  max-width 500px
+
+  code
+    display block
+    color black
+    font-family 'Menlo', 'Monaco', monospace
+    font-size 14px
+    line-height 1.8
+    max-width 300px
+    margin 0 auto
+
+ol.fancy-list
+ul.fancy-list
+  list-style none
+  padding 20px 0px
+  li
+    @extend .heading
+    border-bottom 1px solid rgba(#000, 0.1)
+    border-radius 3px
+    padding 10px 0px 10px
+    position relative
+
+    &:first-child
+      border-top 1px solid rgba(#000, 0.1)
+
+    p
+      margin 0px 0px 0px 50px
+      clear none
+
+ol.fancy-list
+  li
+    i
+      border-radius 50%
+      background-color black
+      color yellow
+      width 16px
+      height 16px
+      line-height 16px
+      padding 3px
+      text-align center
+      margin-right 20px
+      position absolute
+      top 12px
+
+ul.fancy-list
+  li
+    i
+      color black
+      width 16px
+      height 16px
+      line-height 16px
+      padding 3px
+      text-align center
+      margin-right 20px
+      position absolute
+      top 12px

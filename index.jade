@@ -1,0 +1,128 @@
+!!!5
+html
+  head
+    title Pliers – The essential node.js build tool
+    link(rel="stylesheet", href="./css/index.css")
+    meta(name"viewport", content="width=device-width, initial-scale=1, maximum-scale=5")
+  body
+    .container.red
+      .section
+        .hgroup
+          h1.main-title Pliers
+          p.sub-title The essential node.js build tool
+        .window
+          .window-top-bar
+            span.window-title Terminal
+          .terminal
+            p.line
+              span.prompt $
+              span.pwd ~
+              span.command npm install pliers -g
+        a.button(href='https://github.com/serby/pliers') View on GitHub
+    .container.yellow
+      .section
+        .article
+          
+          h2.article-title Essential features, nothing more
+          
+          p
+            | Pliers allows you to use JavaScript to write your build tasks like
+            | you would your applications. It has just three key features:
+          
+          ol.fancy-list
+            li
+              i 1
+              p
+                strong Tasks
+                |  – separate your build into runnable tasks, with dependency resolution
+            li
+              i 2
+              p
+                strong Filesets
+                |  – define a set of files based on a include and exclude patterns 
+            li
+              i 3
+              p
+                strong File watching
+                |  – Watch files and execute arbitrary code when they change
+
+          p
+            | These important features are provided for you, then Pliers gets out of
+            | your way. There is no special API for tasks – you just write JavaScript.
+            | That way, you can leverage the buzzing ecosystem that is npm as your
+            | 'plugin' repository.
+
+    .container.blue
+      .section
+        .article
+          h2.article-title Do we really need another build tool?
+          p
+            | Here in the Pliers camp, our previous build workflows often involved Makefiles.
+            | We are JS junkies, not make or bash experts.
+
+          p
+            | Writing our build tasks in JS means…
+          ul.fancy-list
+            li
+              i –
+              p
+                | We can use the same quality assurance tools that we use on the
+                | rest of our stack
+            li
+              i –
+              p
+                | We can leverage the thousands of available unit tested
+                | npm modules out there
+            li
+              i –
+              p
+                | And we know the language inside out
+
+          p
+            | There's no dispute that GNU Make is a powerful tool, but not only does
+            | it fail to line up with our love for JS – it lacks one vital feature
+            | that is a big use case for us: 
+            i watching files for changes and performing certain actions
+            | .
+
+          p
+            | So, what about the existing JS alternatives…
+
+          ul.fancy-list
+            li
+              i –
+              p
+                strong: a(href='#') Jake
+                |  offers just task functionality. Enough for some, but we need more.
+            li
+              i –
+              p
+                strong: a(href='#') Grunt
+                |  is extendable enough, but the arbitrary plugin format and its
+                | usage via configuration rather than through code doesn't fit the
+                | way we want to work.
+
+
+    .container.yellow
+      .section
+        .article
+          h2.article-title Getting Started
+          p
+            | The GitHub readme has the API nitty gritty, but here is a plain
+            | and simple example to get you started:
+          pre: code
+            include examples/hello-task.html
+          p: a.button-alt(href='#') Click me!
+    .container.red
+      .page-footer
+        p: a(href='https://github.com/serby/pliers/network/members') Pliers contributors.
+        p
+          | Web site by 
+          a(href='http://bengourley.co.uk') Ben Gourley
+          |  from 
+          a(href='http://clock.co.uk') Clock
+          | .
+        p
+          | Pliers icon by Daniel Hickey from 
+          a(href='#') The Noun Project
+          | .
